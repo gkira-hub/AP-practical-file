@@ -1,0 +1,178 @@
+:root {
+    --red: hsl(0, 100%, 74%);
+    --blue: hsl(248, 32%, 49%);
+    --green: hsl(154, 59%, 51%);
+    --dark-blue: hsl(249, 10%, 26%) ;
+    --grayish-blue: hsl(246, 25%, 77%);
+    --dull-white: hsl(249, 100%, 97%);
+    --wrong-input: hsl(0, 79%, 69%);
+    --shadow: hsla(249, 10%, 26%, 0.247);
+    --btn-shadow: hsl(154, 55%, 45%);
+    --btn-hover: hsl(160, 74%, 60%);
+}
+body, * {
+    font-family: 'Poppins', sans-serif !important;
+}
+body {
+    background: url("images/bg-intro-desktop.png"), var(--red);
+    background-size: 100%;
+}
+
+.message {
+	color: rgb(74, 45, 119);
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	padding: 10;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 90px;
+    padding-left: 11%; padding-right: 8%;
+}
+
+/******************** COLUMN-1 **************************/
+.column-1 {
+    flex-basis: 50%;
+    align-self: auto;
+    text-align: left;
+    padding-right: 15px;
+}
+.column-1 h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+}
+.column-1 p {
+    margin-top: 25px;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--dull-white);
+}
+
+/***************************** COLUMN-2 ************************/
+.column-2 {
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.card { /* Bootstrap Card */
+    padding: 40px 40px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px var(--shadow);
+}
+
+p.card {  /* Purchase Plan Background */
+    display: block;
+    padding: 20px 10px 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    background: var(--blue);
+    box-shadow: 0 8px var(--shadow);
+    color: white;
+}
+p > span { font-weight: 400; color: var(--dull-white);}
+
+div.card { /* Form Background */
+    margin-top: 25px;
+}
+
+.form-control { /* Input Boxes & Submit Button */
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+input { 
+    font-size: 0.9em !important;
+    font-weight: 600;
+}
+input:focus {
+    border: 1px solid black !important;
+}
+
+#submit-btn {
+    margin-top: 25px;
+    padding: 15px 10px 10px;
+    background: var(--green);
+    color: white;
+    box-shadow: 0 3px 2px var(--btn-shadow);
+    border: none;
+}
+#submit-btn:hover {
+    background: var(--btn-hover);
+    cursor: pointer;
+}
+
+/* Terms & Conditions */
+small {
+    font-size: 0.6em;
+    color: var(--grayish-blue);
+}
+small > a { 
+    font-weight: 600;
+    color: var(--red);
+}
+small > a:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
+/************************************ EVENT-BASED APPLICATIONS *********************************/
+/* PRESS ANIMTION */
+@keyframes press {
+    50% {  transform: translateY(2px); opacity: 0 }
+    100% {    transform: translateY(2px); opacity: 1 }
+}
+.animate {
+    animation: press 0.3s -0.02s ease-in-out;
+}
+
+
+
+/* IN CASE INPUT IS WRONG */
+input + small {
+    display: none; /* Will apply in script */
+    text-align: right;
+    font-style: oblique 10deg; 
+    font-weight: 500;
+    color: var(--wrong-input);
+    margin-top: 5px;
+}
+.invalid-input {
+    border: 2px solid var(--wrong-input) !important;
+    color: var(--wrong-input);
+    background: url("images/icon-error.svg") no-repeat center right 20px;
+}
+
+
+
+
+/************************************** MOBILE SITE  ********************************************/
+@media screen and (max-width: 800px){
+    body {
+        background: url("images/bg-intro-desktop.png"), var(--red);
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 90px;
+        padding-left: 8%; padding-right: 8%;
+    }
+    /******************** COLUMN-1 **************************/
+    .column-1 {
+        flex-basis: 50%;
+        align-self: auto;
+        text-align: center;
+        padding-right: 15px;
+    }
+}
