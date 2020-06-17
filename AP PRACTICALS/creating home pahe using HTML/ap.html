@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:auto;
+}
+
+.header {
+  background-color:darksalmon;
+  padding: 20px;
+  text-align: center;
+  color: crimson
+	  border:solid;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: gray;
+	border:solid;
+}
+
+.topnav a {
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 58.5px;
+  text-decoration: none;
+	border:solid;
+}
+
+.topnav a:hover {
+  background-color:navajowhite;
+  color: black;
+}
+	.tovnav a:active{
+		background-color: blanchedalmond;
+		color: cornflowerblue;
+		text-decoration: underline;
+	}
+	
+.column {
+  float: left;
+  padding: 69px;
+	
+}
+
+.column.side {
+  width: 25%;
+	
+  background-color: indianred;
+	border-left: solid;
+	border-right: solid;
+	}
+
+.column.middle {
+  width: 50%;
+background-size: 69px;
+	background-color: indianred;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1080px) {
+  .column.side, .column.middle {
+    width: 100%;
+	 
+  }
+}
+
+.footer {
+  background-color:lightgrey;
+  padding: 10px;
+  text-align: center;
+	border:solid;
+}
+		.position{
+         display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;	
+		background-color: crimson;
+			border: solid  #100808;}
+	.x{
+		border: solid;
+		background-color: indianred;
+	}
+	
+	
+	
+
+</style>
+</head>
+<body class="x">
+
+<div class="header">
+  <h1><strong><em><u>Indian Institute Of Technology Delhi</u></em></strong></h1>
+  
+</div>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="#">Acadmics</a>
+  <a href="#">Alumni</a>
+ <a href="#">Campus life</a>
+  <a href="#">Student login</a>
+  <a href="#">Faculty login</a>
+	<a href="#">Placement cell</a>
+  <a href="#">Result</a>
+</div>
+	<div class="bg">
+
+<div class="row">
+  <div class="column side">
+    <h2>Student Details:</h2>
+	  <img src="download.jpeg" alt="unkown" top center/> <br>
+	  <b><marquee>Name:Gurkirat singh</marquee><br>
+	Roll No.:11912048<br>
+	Programme:B.Tech<br>
+		Branch:IT<br></b>
+  </div>
+  
+  <div class="column middle">
+    <img src="logo.png" alt="logo" class="position"/> 
+  </div>
+  
+  <div class="column side">
+    <h2>Assignment Details</h2>
+	  
+	  <u>Application Programming Assignment<br></u>
+	  submitted to:MD. Arquam Sir<br>
+	  <img src="arquam.jpeg" alt="teacher" class="x"/>
+	  
+  </div>
+		</div>
+</div>
+	
+<div class="footer">
+  <p>Contact us:iit@delhi.ac.in</p>
+</div>
+  
+</body>
+</html>
